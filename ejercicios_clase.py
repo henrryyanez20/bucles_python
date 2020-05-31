@@ -5,7 +5,6 @@ Ejercicios de clase
 ---------------------------
 Autor: Inove Coding School
 Version: 1.1
-
 Descripcion:
 Programa creado para poner a prueba los conocimientos
 adquiridos durante la clase
@@ -25,8 +24,9 @@ def ej1():
     # Además, complete la línea de código necesaria para que
     # el valor de "x" incremente "1" en cada iteración
 
-    while condicion:    # reemplace "condicion" por lo que crea necesario
+    while x < 6:    # reemplace "condicion" por lo que crea necesario
         print("Valor de x =", x)
+        x += 1
         # Coloque la línea de código para que "X" incremente "1"
 
     x = 5
@@ -35,8 +35,9 @@ def ej1():
     # Además, complete la línea de código necesaria para que
     # el valor de "x" decremente "1" en cada iteración
 
-    while condicion:    # reemplace "condicion" por lo que crea necesario
-        print("Valor de x =", x)
+    while (x >= 0):    # reemplace "condicion" por lo que crea necesario
+        print("Valor de x en decremento es =", x)
+        x -= 1
         # Coloque la línea de código para que "X" decremente "1"
 
 
