@@ -112,12 +112,17 @@ def ej5():
     # Tener en cuenta que "range" no incluye el número de "fin" en su secuencia,
     # sino que va hasta el anterior
 
-    inicio = int(input('Ingrese el primero número de la secuencia\n'))
+    inicio = int(input('Ingrese el PRIMER número de la secuencia\n'))
     # fin....
-
+    fin = int(input('Ingrese el SEGUNDO número de la secuencia\n'))
+    finrango = fin + 1
     # for ... in range(....)
-
+    suma = 0
+    for x in range(inicio, finrango):
+        suma = x + suma
+        print(suma)
     # Imprimir el valor de la sumatoria
+    print("\n[*] La suma total del rango entre",inicio,"y",fin,"es: ", suma)
 
 
 def ej6():
@@ -145,6 +150,6 @@ if __name__ == '__main__':
     #ej1()
     #ej2()
     #ej3()
-    ej4()
-    #ej5()
+    #ej4()
+    ej5()
     #ej6()
