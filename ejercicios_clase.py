@@ -48,6 +48,9 @@ def ej2():
     # para imprimir en pantalla todos los colores
     colores = ['rojo', 'naranja', 'verde', 'azul']
 
+    for color in colores:
+        print("El color de la lista es:",color)
+
     # Itere el "for" utilizando la lista como parámero
     # y utilizar como elemento del "for" cada color
     # for color ...
@@ -125,8 +128,8 @@ def ej6():
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    ej1()
-    #ej2()
+    #ej1()
+    ej2()
     #ej3()
     #ej4()
     #ej5()
