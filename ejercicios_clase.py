@@ -134,14 +134,23 @@ def ej6():
     # Tener en cuenta que "range" no incluye el número de "fin" en su secuencia,
     # sino que va hasta el anterior
 
-    inicio = int(input('Ingrese el primero número de la secuencia\n'))
+    inicio = int(input('Ingrese el PRIMER número de la secuencia\n'))
     # fin....
-
+    fin = int(input('Ingrese el SEGUNDO número de la secuencia\n'))
+    finrango = fin + 1
     cantidad_numeros_positivos = 0  # Inicializo el contador en 0
-    #cantidad_numeros_negativos
+    cantidad_numeros_negativos = 0
 
     # for ... in range(....)
-
+    for i in range(inicio, finrango):
+        if i < 0:
+            cantidad_numeros_negativos = cantidad_numeros_negativos  + i
+            print("Suma de negativos:",cantidad_numeros_negativos)
+        else:
+            cantidad_numeros_positivos = i + cantidad_numeros_positivos
+            print("Suma de positivos:",cantidad_numeros_positivos)
+    print("\n[*] La suma total de numeros NEGATIVOS es: ", cantidad_numeros_negativos)
+    print("\n[*] La suma total de numeros POSITIVOS es: ", cantidad_numeros_positivos)
     # Imprimir el valor de la cantidad de números positivos y negativos
 
 
@@ -151,5 +160,5 @@ if __name__ == '__main__':
     #ej2()
     #ej3()
     #ej4()
-    ej5()
-    #ej6()
+    #ej5()
+    ej6()
