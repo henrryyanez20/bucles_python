@@ -5,7 +5,6 @@ Ejercicios de práctica
 ---------------------------
 Autor: Inove Coding School
 Version: 1.1
-
 Descripcion:
 Programa creado para que practiquen los conocimietos
 adquiridos durante la semana
@@ -35,10 +34,22 @@ def ej1():
     sino que va hasta el anterior
     '''
 
-    # inicio = ....
-    # fin = ....
+    inicio = int(input('Ingrese el INICIO NUMERICO de la secuencia\n'))
+    fin = int(input('Ingrese el FIN NUMERICO de la secuencia\n'))
+    sumatoria = 0
+    fin_range = fin + 1
 
+    for x in range(inicio, fin_range):
+        sumatoria += x
+        cantidad_numeros = len(range(inicio, fin_range))
+        
+    print("\n[*] La suma de los Numeros ingresados es:",sumatoria)
+    print("\n[*] El Total de numeros de la secuencia ingresada es:",cantidad_numeros)
+
+    promedio = sumatoria / cantidad_numeros
+    print("\n[*] El PROMEDIO de los numeros ingresados es:",promedio)
     # cantidad_numeros ....
+
     # sumatoria ....
 
     # bucle.....
@@ -58,7 +69,6 @@ def ej2():
     copielo a este ejercicio y modifíquelo, ahora se deberá ejecutar
     indefinidamente hasta que como operador se ingrese la palabra "FIN",
     en ese momento debe terminar el programa
-
     Se debe debe imprimir un cartel de error si el operador ingresado no es
     alguno de lo soportados o no es la palabra "FIN"
     '''
@@ -72,17 +82,13 @@ def ej3():
     <condicionales_python / ejercicios_clase / ej3>,
     copielo a este ejercicio y modifíquelo para cumplir
     el siguiente requerimiento
-
     Las notas del estudinte se encuentran almacenadas en una
     lista llamada "notas" que ya hemos definido al comienzo del archivo
-
     Debe caluclar el promedio de todas las notas y luego transformar
     la califiación en una letra según la escala establecida en el ejercicio
     "calificaciones" <condicionales_python / ejercicios_clase / ej3>
-
     A medida que recorre las notas, no debe considerar como válidas aquellas
     que son negativas, en ese caso el alumno estuvo ausente
-
     Debe contar la cantidad de notas válidas y la cantidad de ausentes
     '''
 
@@ -113,7 +119,6 @@ def ej4():
     <condicionales_python / ejercicios_practica /ej5>,
     copielo a este ejercicio y modifíquelo para cumplir el
     siguiente requerimiento
-
     En este ejercicio se lo provee de una lista de temperatuas,
     esa lista de temperatuas corresponde a los valores de temperaturas
     tomados durante una temperorada del año en Buenos Aires.
@@ -121,14 +126,11 @@ def ej4():
     en que temporada del año se realizó el muestreo de temperatura.
     La variable con la lista de temperaturas se llama "temp_dataloger"
     definida al comienzo del archivo
-
     Debe recorrer la lista "temp_dataloger" y obtener los siguientes
     resultados
-
     1 - Obtener la máxima temperatura
     2 - Obtener la mínima temperatura
     3 - Obtener el promedio de las temperatuas
-
     Los resultados se deberán almacenar en las siguientes variables
     que ya hemos preparado para usted
     '''
@@ -159,12 +161,10 @@ def ej4():
     determinar en que epoca del año nos encontramos en Buenos Aires utilizando
     la estadística de años anteriores. Basados en el siguiente link realizamos
     las siguientes aproximaciones:
-
     verano -->      min = 19, max = 28
     otoño -->       min = 11, max = 24
     invierno -->    min = 8, max = 14
     primavera -->   min = 10, max = 24
-
     Referencia:
     https://es.weatherspark.com/y/28981/Clima-promedio-en-Buenos-Aires-Argentina-durante-todo-el-a%C3%B1o
     '''
@@ -183,22 +183,18 @@ def ej5():
     <condicionales_python / ejercicios_practica / ej4>,
     copielo a este ejercicio y modifíquelo para cumplir
     el siguiente requerimiento
-
     Realize un programa que corra indefinidamente en un bucle, al comienzo de la
     iteración del bucle el programa consultará al usuario con el siguiente menú:
     1 - Ordenar por orden alfabético (usando el operador ">")
     2 - Ordenar por cantidad de letras (longitud de la palabra)
     3 - Salir del programa
-
     En caso de presionar "3" el programa debe terminar e informar por
     pantalla de que ha acabado,
     en caso contrario si se presionar "1" o "2" debe continuar con la siguiente tarea
-
     NOTA: Si se ingresa otro valor que no sea 1, 2 o 3 se debe enviar
     un mensaje de error y volver a comenzar el bucle
     (vea en el apunte "Bucles - Sentencias" para encontrar
     la sentencia que lo ayude a cumplir esa tarea)
-
     Si el bucle continua (se presionó "1" o "2") se debe ingresar a otro bucle
     en donde en cada iteración se pedirá una palabra. La cantidad de iteración
     (cantidad de palabras a solicitar) lo dejamos a gusto del alumno, intente que esa
@@ -207,7 +203,6 @@ def ej5():
     lista la debe inicializar vacia y agregar cada nuevo valor con el método "append".
     Luego de tener las palabras deseadas almacenadas en una lista de palabras
     se debe proceder a realizar las siguientes tareas:
-
     Si se ingresa "1" por consola se debe obtener la palabra
     más grande por orden alfabético
     Luego de terminar de recorrer toda la lista (utilizar un bucle "for")
@@ -216,7 +211,6 @@ def ej5():
     Recuerde que debe inicializar primero su variable
     donde irá almacenando la palabra que cumpla dicha condición.
     ¿Con qué valor debería ser inicializada dicha variable?
-
     Si se ingresa "2" por consola se debe obtener la palabra
     con mayor cantidad de letras
     Luego de terminar de recorrer toda la lista (utilizar un bucle "for")
@@ -225,7 +219,6 @@ def ej5():
     Recuerde que debe inicializar primero su variable
     donde irá almacenando la palabra que cumpla dicha condición.
     ¿Con qué valor debería ser inicializada dicha variable?
-
     NOTA: Es recomendable que se organice con lápiz y papel para
     hacer un bosquejo del sistema ya que deberá utilizar 3 bucles en total,
     1 - El bucle principal que hace que el programa corra hasta ingresar un "3"
@@ -233,13 +226,12 @@ def ej5():
         que se deben ir guardando en una lista
     3- Otro bucle interno que corre luego de que termine el bucle "2" que
        recorre la lista de palabras y busca la mayor según el motivo ingresado ("1" o "2")
-
   '''
 
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
-    #ej1()
+    ej1()
     #ej2()
     #ej3()
     #ej4()
