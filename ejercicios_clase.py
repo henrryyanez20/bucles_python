@@ -70,6 +70,10 @@ def ej3():
     numeros = [1, 5, -1, 6, 10, 2, -5]
     suma = 0   # Variable ya inicializada, la suma arranca en cero
 
+    for numero in numeros:
+        suma = numero + suma
+        print(suma)
+    print("[*] La suma total de la lista es:", suma)
 
 def ej4():
     # Ejercicios con bucles "while"
@@ -129,8 +133,8 @@ def ej6():
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     #ej1()
-    ej2()
-    #ej3()
+    #ej2()
+    ej3()
     #ej4()
     #ej5()
     #ej6()
