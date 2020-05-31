@@ -42,23 +42,18 @@ def ej1():
     for x in range(inicio, fin_range):
         sumatoria += x
         cantidad_numeros = len(range(inicio, fin_range))
-        
+
     print("\n[*] La suma de los Numeros ingresados es:",sumatoria)
     print("\n[*] El Total de numeros de la secuencia ingresada es:",cantidad_numeros)
 
     promedio = sumatoria / cantidad_numeros
     print("\n[*] El PROMEDIO de los numeros ingresados es:",promedio)
     # cantidad_numeros ....
-
     # sumatoria ....
-
     # bucle.....
-
     # Al terminar el bucle calcular el promedio como:
     # promedio = sumatoria / cantidad_numeros
-
     # Imprimir resultado en pantalla
-
 
 def ej2():
     print("Mi Calculadora (^_^)")
@@ -72,6 +67,36 @@ def ej2():
     Se debe debe imprimir un cartel de error si el operador ingresado no es
     alguno de lo soportados o no es la palabra "FIN"
     '''
+    num_1 = int(input('Ingrese el primer numero a calcular\n'))
+    num_2 = int(input('Ingrese el segundo numero a calcular\n'))
+
+    suma = num_1 + num_2
+    resta = num_1 - num_2
+    multiplicacion = num_1 * num_2
+    division = num_1 / num_2
+    potencia = num_1 ** num_2
+    estado = True
+
+    while estado:
+        operador = str(input("Ingresa el simbolo del operador que desea ejecutar: "))
+
+        if operador == "+":
+            print("El resultado de la SUMA es:", suma)
+        elif operador == "-":
+            print("El resultado de la RESTA es:", resta)
+        elif operador == "*":
+            print("El resultado de la MULTPLICACION es:", multiplicacion)
+        elif operador == "/":
+            print("El resultado de la DIVISION es:", division)
+        elif operador == "**":
+            print("El resultado de la POTENCIA es:", potencia)
+        elif operador == "FIN":
+            print("\n[*] Saliendo de la operación")
+            break
+        else:
+            print("\n\x1b[6;37;41m[!] ERROR, el simbolo o valor ingresado no es válido, intenta de nuevo. \x1b[0m")
+
+
 
 
 def ej3():
@@ -231,8 +256,8 @@ def ej5():
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
-    ej1()
-    #ej2()
+    #ej1()
+    ej2()
     #ej3()
     #ej4()
     #ej5()
