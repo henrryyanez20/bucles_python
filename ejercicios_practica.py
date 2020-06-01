@@ -195,6 +195,29 @@ def ej4():
     temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la lista
 
     # Colocar el bucle aqui......
+    for temperatura in temp_dataloger:
+
+        if (temperatura_min is None) or (temperatura < temperatura_min):
+            temperatura_min = temperatura
+
+        elif (temperatura_max is None) or (temperatura > temperatura_max):
+            temperatura_max = temperatura
+
+        temperatura_sumatoria += temperatura
+        temperatura_len = len(temp_dataloger)
+        temperatura_promedio = temperatura_sumatoria / temperatura_len
+
+    print("Temperatura MÍNIMA es:", temperatura_min)
+    print("Temperatura MÍNIMA con MIN PYTHON es:",min(temp_dataloger))
+
+    print("Temperatura MÁXIMA es:", temperatura_max)
+    print("Temperatura MÁXIMA con MAX PYTHON es:",max(temp_dataloger))
+
+    print("Sumatoria de las temperaturas: ", temperatura_sumatoria)
+    print("Sumatoria de las temperaturas con SUM Python = ", sum(temp_dataloger))
+
+    print("Cantidad de temperaturas registradas: ", temperatura_len)
+    print("El promedio de las temperaturas es: ", temperatura_promedio)
 
     # Al finalizar el bucle compare si el valor que usted calculó para
     # temperatura_max y temperatura_min coincide con el que podría calcular
@@ -226,6 +249,23 @@ def ej4():
     # ¿En qué época del año nos encontramos?
     # Imprima el resultado en pantalla
     # Debe utilizar temperatura_max y temperatura_min para definirlo
+
+    if temperatura_min and temperatura_max:
+        if temperatura_min >=8 and temperatura_max <=14:
+            print("Temporada de Invierno")
+
+    if temperatura_min and temperatura_max:
+        if temperatura_min >=10 and temperatura_max <=24:
+            print("Temporada de Primavera")
+
+    if temperatura_min and temperatura_max:
+        if temperatura_min >=11 and temperatura_max <=24:
+            print("Temporada de Otoño")
+
+    if temperatura_min and temperatura_max:
+        if temperatura_min >=19 and temperatura_max <=28:
+            print("Temporada de Verano")
+
 
 
 def ej5():
@@ -286,6 +326,6 @@ if __name__ == '__main__':
     print("Ejercicios de práctica")
     #ej1()
     #ej2()
-    ej3()
-    #ej4()
+    #ej3()
+    ej4()
     #ej5()
