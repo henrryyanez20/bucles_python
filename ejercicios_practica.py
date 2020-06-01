@@ -98,7 +98,6 @@ def ej2():
 
 
 
-
 def ej3():
     print("Mi organizador académico (#_#)")
 
@@ -123,18 +122,47 @@ def ej3():
 
     cantidad_notas = 0      # Aquí debe contar cuantas notas válidas encontró
     cantidad_ausentes = 0   # Aquí debe contar cuantos ausentes hubo
+    puntaje = 0
+    print("Mis notas son las siguientes:\n",notas,"\n")
+    notas_validas = []
+    notas_invalidas = []
 
     # Realice aquí el bucle para recorrer todas las notas
     # y cacular la sumatoria
+    for nota in notas:
+        if nota >= 0:
+            cantidad_notas += nota
+            notas_validas.append(nota)
+        else:
+            notas_invalidas.append(nota)
+            #print("Valor no tomado en cuenta por estas ausente",nota)
+    print("_"*66)
+    print("Lista de notas VÁLIDAS:",notas_validas)
+    print("Lista de notas NO VÁLIDAS:",notas_invalidas,"\n")
+    print("_"*66)
+
+    print("La cantidad de notas VÁLIDAS encontradas son:",len(notas_validas))
+    print("La cantidad de AUSENCIAS son:", len(notas_invalidas))
 
     # Terminado el bucle calcule el promedio como
     # promedio = sumatoria / cantidad_notas
-
+    promedio = cantidad_notas / len(notas_validas)
+    print("El promedio de notas es:",promedio)
+    print("_"*66)
     # Utilice la nota promedio calculada y transformela
     # a calificación con letras, imprima en pantalla el resultado
-
+    if promedio >= 90:
+        print("\x1b[6;37;42m[*]Como tu promedio es",promedio,"entonces tienes un [A] de calificación\x1b[0m")
+    elif promedio >= 80 and promedio < 90:
+        print("\x1b[6;37;42m[*]Como tu promedio es",promedio,"entonces tienes un [B] de calificación\x1b[0m")
+    elif promedio >= 70 and promedio < 80:
+        print("\x1b[7;30;43m[*]Como tu promedio es",promedio,"entonces tienes un [C] de calificación\x1b[0m")
+    elif promedio >= 60 and promedio < 70:
+        print("\x1b[6;37;41m[!]Como tu promedio es",promedio,"entonces tienes un [D] de calificación\x1b[0m")
+    else:
+        print("Tu calificación es [D]")
     # Imprima en pantalla al cantidad de ausentes
-
+    print("_"*66)
 
 def ej4():
     print("Mi primer pasito en data analytics")
@@ -257,7 +285,7 @@ def ej5():
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     #ej1()
-    ej2()
-    #ej3()
+    #ej2()
+    ej3()
     #ej4()
     #ej5()
