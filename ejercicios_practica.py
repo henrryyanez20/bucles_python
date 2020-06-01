@@ -321,11 +321,46 @@ def ej5():
        recorre la lista de palabras y busca la mayor según el motivo ingresado ("1" o "2")
   '''
 
+    condicion = True
+    lista_palabras = []
+    total_len = 0
+
+    while condicion:
+        menu = int(input("""\nIngrese las siguientes opciones:
+                            [*] 1 para orden alfabetico 
+                            [*] 2 para orden segun cantidad de letras
+                            [*] 3 para finalizar:\n"""))
+        if (menu != 1) and (menu != 2) and (menu != 3):
+            print("[!] ERROR, vuelva a intentarlo")
+        
+        elif menu == 3:
+            print("[!] Saliendo del programa")
+            break
+
+        elif (menu == 1) or (menu == 2):
+
+            if menu == 1:
+                lista_palabras = []
+                for x in range(4):
+                    valor=str(input("[*] Ingresa la palabra numero [{}]/[4]: ".format(x)))
+                    lista_palabras.append(valor)
+                print("La lista de palabras ingresadas son:\t",lista_palabras)
+                print("\x1b[6;37;42m[*] La palabra más grande alfabeticamente es:\x1b[0m {}".format(max(lista_palabras)))
+
+            if menu == 2:
+                lista_palabras = []
+                for x in range(4):
+                    valor=str(input("[*] Ingresa la palabra numero [{}]/[4]: ".format(x)))
+                    lista_palabras.append(valor)
+                    total_len = len(lista_palabras)
+
+                print("La lista de palabras ingresadas son:\t",lista_palabras)
+                print("\x1b[6;37;42m[*] La palabra con más caracteres ingresados es:\x1b[0m",max(lista_palabras, key=len))
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     #ej1()
     #ej2()
     #ej3()
-    ej4()
-    #ej5()
+    #ej4()
+    ej5()
