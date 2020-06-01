@@ -41,7 +41,7 @@ def ej1():
 
     for x in range(inicio, fin_range):
         sumatoria += x
-        cantidad_numeros = len(range(inicio, fin_range))
+        cantidad_numeros = len(range(inicio, fin_range)) # Inove: Este cálculo podría ejecutarse una única vez fuera del bucle
 
     print("\n[*] La suma de los Numeros ingresados es:",sumatoria)
     print("\n[*] El Total de numeros de la secuencia ingresada es:",cantidad_numeros)
